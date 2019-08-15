@@ -188,6 +188,7 @@ class Memoizer(object):
         return fname, ''.join(version_data_list)
 
     def _memoize_make_cache_key(self, make_name=None, timeout=DEFAULT_TIMEOUT):
+        print('_memoize_make_cache_key called')
         """
         Function used to create the cache_key for memoized functions.
         """

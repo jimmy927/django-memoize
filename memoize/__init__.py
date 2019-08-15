@@ -218,7 +218,7 @@ class Memoizer(object):
             if self.cache_prefix:
                 cache_key = '%s:%s' % (self.cache_prefix, cache_key)
 
-            return cache_key
+            return cache_key.replace(' ', '_')
         return make_cache_key
 
     def _memoize_kwargs_to_args(self, f, *args, **kwargs):
